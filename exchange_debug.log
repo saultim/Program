@@ -1,0 +1,276 @@
+2025-11-29 17:21:00 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:21:00 - 📋 ModelState.IsValid: False
+2025-11-29 17:21:00 - 📦 RequestedBookId: 3
+2025-11-29 17:21:00 - 📦 OfferedBookId: 2
+2025-11-29 17:21:00 - 📦 Message: выфвф выфв
+2025-11-29 17:21:00 - 📨 FORM DATA:
+2025-11-29 17:21:00 -    RequestedBookId = '3'
+2025-11-29 17:21:00 -    OfferedBookId = '2'
+2025-11-29 17:21:00 -    Message = 'выфвф выфв'
+2025-11-29 17:21:00 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lx4YFC5FSLkZ1lyIXgaUm7fJfGixutqUoQHCLXVpObaLaTcL8nL-KhLzVW5NyWxmZnZovHzfEkw8kOB_BROSfJcqOo-c5kM44qgj0jeGDCtACdfvX_Xx_LBuIpI3tFPaU30lQtBHHs6vu-heQGWbLkYHvLawHrUk94Cm_QOsJ6WCA'
+2025-11-29 17:21:00 - ❌ Модель НЕ валидна!
+2025-11-29 17:21:00 -    - The RequestedBook field is required.
+2025-11-29 17:21:09 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:21:09 - 📋 ModelState.IsValid: False
+2025-11-29 17:21:09 - 📦 RequestedBookId: 3
+2025-11-29 17:21:09 - 📦 OfferedBookId: 2
+2025-11-29 17:21:09 - 📦 Message: авфа
+2025-11-29 17:21:09 - 📨 FORM DATA:
+2025-11-29 17:21:09 -    RequestedBookId = '3'
+2025-11-29 17:21:09 -    OfferedBookId = '2'
+2025-11-29 17:21:09 -    Message = 'авфа'
+2025-11-29 17:21:09 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lzB0BS3_ALZvO45JZ0JxoY1vSSqfU28k3RUE1TMo0AM4g6yRXDinfsBQ3lAiSuSrjvtLKKWHY1yLTLfJ38V7AR9LmSqDOc68f4s6gnhVWocC0cl5EUYr_aXbdh5TE4CEh0mskaMA-S1nOHGAAcLXz1hnvEApaj0TcAUIJx6wyfA0g'
+2025-11-29 17:21:09 - ❌ Модель НЕ валидна!
+2025-11-29 17:21:09 -    - The RequestedBook field is required.
+2025-11-29 17:23:38 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:23:38 - 📦 RequestedBookId: 3
+2025-11-29 17:23:38 - 📦 OfferedBookId: 2
+2025-11-29 17:23:38 - 📦 Message: вфыв
+2025-11-29 17:23:38 - 📨 FORM DATA:
+2025-11-29 17:23:38 -    RequestedBookId = '3'
+2025-11-29 17:23:38 -    OfferedBookId = '2'
+2025-11-29 17:23:38 -    Message = 'вфыв'
+2025-11-29 17:23:38 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwPl2SQAcjyvGTf16s4-YOG6FvSA9JW8KOed2zXNQrHLjYrHGzSGNRXRqK7Q5_CeTYlsUtHwbt0-zEbuBee7amsaIQYkWreSt6xBtrxKiMiyoHLG2zxl5biiDA7HalCFWYwWQolb5RB30X4_SjA6QYkvkIwjd37KW9TcrMndSX__g'
+2025-11-29 17:23:38 - ✅ Данные формы корректны!
+2025-11-29 17:23:38 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:23:38 - 📚 OfferedBook: мммм (ID: 2, Exists: True)
+2025-11-29 17:23:38 - 📖 RequestedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:23:38 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:23:38 - 🔄 Создаем новый обмен...
+2025-11-29 17:23:38 - 📝 Обмен создан: 2 -> 3
+2025-11-29 17:23:38 - 💾 Сохраняем в базу...
+2025-11-29 17:23:38 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 1
+2025-11-29 17:33:43 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:33:43 - 📦 RequestedBookId: 3
+2025-11-29 17:33:43 - 📦 OfferedBookId: 2
+2025-11-29 17:33:43 - 📦 Message: dsds
+2025-11-29 17:33:43 - 📨 FORM DATA:
+2025-11-29 17:33:43 -    RequestedBookId = '3'
+2025-11-29 17:33:43 -    OfferedBookId = '2'
+2025-11-29 17:33:43 -    Message = 'dsds'
+2025-11-29 17:33:43 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lxQznQvBwD2fdyiQ87gO85AlNsdCV2xJ9grwL0M4tud2u54EcfO-HvbDaX0auRKfe4Ev3LFFUC23BkUGmRVktj3fm3Iv-dUqkKXrmzGuEXwZq4lPIzv1L_-JP-s-_Cd1WTL7Ve2JBXDn-KS3wRX7bYH8WGfZnNn5RKmBB8Hn5px2A'
+2025-11-29 17:33:43 - ✅ Данные формы корректны!
+2025-11-29 17:33:43 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:33:43 - 📚 OfferedBook: мммм (ID: 2, Exists: True)
+2025-11-29 17:33:43 - 📖 RequestedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:33:43 - 🎯 Целевой пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:33:43 - 🔄 Создаем новый обмен...
+2025-11-29 17:33:43 - 📝 Обмен создан: 2 -> 3
+2025-11-29 17:33:43 - 💾 Сохраняем в базу...
+2025-11-29 17:33:43 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 2
+2025-11-29 17:46:09 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:46:09 - 📦 RequestedBookId: 4
+2025-11-29 17:46:09 - 📦 OfferedBookId: 2
+2025-11-29 17:46:09 - 📦 Message: ыв
+2025-11-29 17:46:09 - 📨 FORM DATA:
+2025-11-29 17:46:09 -    RequestedBookId = '4'
+2025-11-29 17:46:09 -    OfferedBookId = '2'
+2025-11-29 17:46:09 -    Message = 'ыв'
+2025-11-29 17:46:09 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwuDPFWxxBSP3a6yrfu19qn90IhhVo9R7oMXWgwk2SA1Ea9fZ9C6QWKsYIdjmSCGgxIp1AA0hRZuGerArFcaX2tNaON6K6Rbo8qtyFYZG0b2CAki9Di6CtIJ2j5AM5YL0EiF3nAx-IBF87zZaQk52j9NyMmYy9CQe7WpaS-xpcKpg'
+2025-11-29 17:46:09 - ✅ Данные формы корректны!
+2025-11-29 17:46:09 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:46:09 - 📚 OfferedBook: мммм (ID: 2, Exists: True)
+2025-11-29 17:46:09 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:46:09 - 🎯 Целевой пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:46:09 - 🔄 Создаем новый обмен...
+2025-11-29 17:46:09 - 📝 Обмен создан: 2 -> 4
+2025-11-29 17:46:09 - 💾 Сохраняем в базу...
+2025-11-29 17:46:09 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 3
+2025-11-29 17:46:44 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:46:44 - 📦 RequestedBookId: 4
+2025-11-29 17:46:44 - 📦 OfferedBookId: 3
+2025-11-29 17:46:44 - 📦 Message: па
+2025-11-29 17:46:44 - 📨 FORM DATA:
+2025-11-29 17:46:44 -    RequestedBookId = '4'
+2025-11-29 17:46:44 -    OfferedBookId = '3'
+2025-11-29 17:46:44 -    Message = 'па'
+2025-11-29 17:46:44 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwHEa7GZSk22sRsT1-WKQvj8nlef7qXtiOltTHiRK7WDFnZgXiw7zRIXG1YZHMDMMSV_vqZbZ3xHCEIoFxh9nceYVbP_S9rujd0Mc9KtOe0kldasoxIUP7t-C2kDi-hZYaGEbdMpcU_ayMA-xLNehJ8gwmdzcWMiRrvSxU3rCV6dw'
+2025-11-29 17:46:44 - ✅ Данные формы корректны!
+2025-11-29 17:46:44 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:46:44 - 📚 OfferedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:46:44 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:46:44 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:46:44 - 🔄 Создаем новый обмен...
+2025-11-29 17:46:44 - 📝 Обмен создан: 3 -> 4
+2025-11-29 17:46:44 - 💾 Сохраняем в базу...
+2025-11-29 17:46:44 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 4
+2025-11-29 17:49:12 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:49:12 - 📦 RequestedBookId: 4
+2025-11-29 17:49:12 - 📦 OfferedBookId: 3
+2025-11-29 17:49:12 - 📦 Message: вфы
+2025-11-29 17:49:12 - 📨 FORM DATA:
+2025-11-29 17:49:12 -    RequestedBookId = '4'
+2025-11-29 17:49:12 -    OfferedBookId = '3'
+2025-11-29 17:49:12 -    Message = 'вфы'
+2025-11-29 17:49:12 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwu1Fq0W07dB6I3lIl4KVBH6KL3GpvJjKmsA1WaWWq6qyuNuNxrGJsA3nqX4XaNrNCwX6VCZHxXiWkuV8NB92KV8U7QdWidicDBzITcI_igEeoxr1dOf5X7lk9K9dlnBKF84VhccarPyN7KQyZIRvgvqZir5r1dkPsnifaLQfRspA'
+2025-11-29 17:49:12 - ✅ Данные формы корректны!
+2025-11-29 17:49:12 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:49:12 - 📚 OfferedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:49:12 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:49:12 - 🎯 Целевой пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:49:12 - 🔄 Создаем новый обмен...
+2025-11-29 17:49:12 - 📝 Обмен создан: 3 -> 4
+2025-11-29 17:49:12 - 💾 Сохраняем в базу...
+2025-11-29 17:49:12 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 5
+2025-11-29 17:50:27 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:50:27 - 📦 RequestedBookId: 4
+2025-11-29 17:50:27 - 📦 OfferedBookId: 2
+2025-11-29 17:50:27 - 📦 Message: вфыв
+2025-11-29 17:50:27 - 📨 FORM DATA:
+2025-11-29 17:50:27 -    RequestedBookId = '4'
+2025-11-29 17:50:27 -    OfferedBookId = '2'
+2025-11-29 17:50:27 -    Message = 'вфыв'
+2025-11-29 17:50:27 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwRncZBDQ7jaFko_6qSHqyV0t3LgHNxRYBicKJjTQ9GQdEJvWwuH72hKg_Rw2hYrTNgnk1FRf6cCCH1mn4yF5K-iw18HqcS6a66K4rxMXzCiP8PlHt_EtN797kebmCuLlJhNHsk1d79s55OI11OLopkyl5MEJ20sZYgzm8TIGFBpg'
+2025-11-29 17:50:27 - ✅ Данные формы корректны!
+2025-11-29 17:50:27 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:50:27 - 📚 OfferedBook: мммм (ID: 2, Exists: True)
+2025-11-29 17:50:27 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:50:27 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:50:27 - 🔄 Создаем новый обмен...
+2025-11-29 17:50:27 - 📝 Обмен создан: 2 -> 4
+2025-11-29 17:50:27 - 💾 Сохраняем в базу...
+2025-11-29 17:50:27 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 6
+2025-11-29 17:54:32 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:54:32 - 📦 RequestedBookId: 4
+2025-11-29 17:54:32 - 📦 OfferedBookId: 2
+2025-11-29 17:54:32 - 📦 Message: ыф
+2025-11-29 17:54:32 - 📨 FORM DATA:
+2025-11-29 17:54:32 -    RequestedBookId = '4'
+2025-11-29 17:54:32 -    OfferedBookId = '2'
+2025-11-29 17:54:32 -    Message = 'ыф'
+2025-11-29 17:54:32 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lxjK9TDgPkMKdqBiIfGLtqAVrDnNSM3rlYZ75s2QfgFu3onVmBrQHELk3OR2yPWwqdpEsTzKvqCijVhMdJUqUM91B5Vuw5gOAuddG4LXmOyi-pu5O03gF9SipZ7EbUXLyJ7PInu5KXfPclsAaCYXIWHRRn87EsqJgw8B_ZNDXEdNA'
+2025-11-29 17:54:32 - ✅ Данные формы корректны!
+2025-11-29 17:54:32 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:54:32 - 📚 OfferedBook: мммм (ID: 2, Exists: True)
+2025-11-29 17:54:32 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:54:32 - 🎯 Целевой пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:54:32 - 🔄 Создаем новый обмен...
+2025-11-29 17:54:32 - 📝 Обмен создан: 2 -> 4
+2025-11-29 17:54:32 - 💾 Сохраняем в базу...
+2025-11-29 17:54:32 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 7
+2025-11-29 17:56:59 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:56:59 - 📦 RequestedBookId: 4
+2025-11-29 17:56:59 - 📦 OfferedBookId: 3
+2025-11-29 17:56:59 - 📦 Message: 3123
+2025-11-29 17:56:59 - 📨 FORM DATA:
+2025-11-29 17:56:59 -    RequestedBookId = '4'
+2025-11-29 17:56:59 -    OfferedBookId = '3'
+2025-11-29 17:56:59 -    Message = '3123'
+2025-11-29 17:56:59 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwg5GkILyxwnPH-jnlp-NSYQQm2ahuB6MQPid2Sh2vnD-Y9oFBJLaSQDN3XwibaxrwG0QvPUC62snW1sSO98HThr5zJRsxpjCJOoaVuTmgQPKEf6maQsaINZhvvepnQfvKBvrR7mP5tXTrIrN9gRvZZG8IaPLsK0MHdzi35V18tNg'
+2025-11-29 17:56:59 - ✅ Данные формы корректны!
+2025-11-29 17:56:59 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:56:59 - 📚 OfferedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:56:59 - 📖 RequestedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:56:59 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:56:59 - 🔄 Создаем новый обмен...
+2025-11-29 17:56:59 - 📝 Обмен создан: 3 -> 4
+2025-11-29 17:56:59 - 💾 Сохраняем в базу...
+2025-11-29 17:56:59 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 8
+2025-11-29 17:59:39 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 17:59:39 - 📦 RequestedBookId: 3
+2025-11-29 17:59:39 - 📦 OfferedBookId: 4
+2025-11-29 17:59:39 - 📦 Message: 221
+2025-11-29 17:59:39 - 📨 FORM DATA:
+2025-11-29 17:59:39 -    RequestedBookId = '3'
+2025-11-29 17:59:39 -    OfferedBookId = '4'
+2025-11-29 17:59:39 -    Message = '221'
+2025-11-29 17:59:39 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lxfPm6F4LL-ftSwrMpxvVPeFJ4Hr_IJjZYTRsg3uzxZJpXH1RA8RxJUSAZi-8KwwZVJzry92_e6XdNlAOFgwGCLJFliiymiTeJcMl0cN2hcnSC_kJ_KJCv2RE56Q0RRmJlXldMU2JWrYouhQea417vjLODjIx_pKQ9EgiQ5oX9Srw'
+2025-11-29 17:59:39 - ✅ Данные формы корректны!
+2025-11-29 17:59:39 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 17:59:39 - 📚 OfferedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 17:59:39 - 📖 RequestedBook: лол (ID: 3, Exists: True)
+2025-11-29 17:59:39 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 17:59:39 - 🔄 Создаем новый обмен...
+2025-11-29 17:59:39 - 📝 Обмен создан: 4 -> 3
+2025-11-29 17:59:39 - 💾 Сохраняем в базу...
+2025-11-29 17:59:39 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 9
+2025-11-29 18:19:11 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 18:19:11 - 📦 RequestedBookId: 5
+2025-11-29 18:19:11 - 📦 OfferedBookId: 6
+2025-11-29 18:19:11 - 📦 Message: Обмен!
+2025-11-29 18:19:11 - 📨 FORM DATA:
+2025-11-29 18:19:11 -    RequestedBookId = '5'
+2025-11-29 18:19:11 -    OfferedBookId = '6'
+2025-11-29 18:19:11 -    Message = 'Обмен!'
+2025-11-29 18:19:11 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lwWQMiA5s1nc-59lqSC2bz9GaqaLRJkJMJKvIo5SOIWqbycPzsN2ngATCTlbm9x9I6UXpq5_ilTkSXP3TL1r7e8w4GpegepRk3RXNceAKF3aCgUWQaxGnWEgFYTkk3nw9YNbJ490_5M-0focH1Ugb28tx8odBvQOeCDOEq8rawIYw'
+2025-11-29 18:19:11 - ✅ Данные формы корректны!
+2025-11-29 18:19:11 - 👤 Текущий пользователь: denismitin1323@gmail.com (ID: f57bab7f-4ae3-4418-a9e1-273aa520f0e4)
+2025-11-29 18:19:11 - 📚 OfferedBook: Алгебра (ID: 6, Exists: True)
+2025-11-29 18:19:11 - 📖 RequestedBook: Золотая рыбка (ID: 5, Exists: True)
+2025-11-29 18:19:11 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 18:19:11 - 🔄 Создаем новый обмен...
+2025-11-29 18:19:11 - 📝 Обмен создан: 6 -> 5
+2025-11-29 18:19:11 - 💾 Сохраняем в базу...
+2025-11-29 18:19:11 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 10
+2025-11-29 18:21:46 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 18:21:46 - 📦 RequestedBookId: 6
+2025-11-29 18:21:46 - 📦 OfferedBookId: 7
+2025-11-29 18:21:46 - 📦 Message: Обмен
+2025-11-29 18:21:46 - 📨 FORM DATA:
+2025-11-29 18:21:46 -    RequestedBookId = '6'
+2025-11-29 18:21:46 -    OfferedBookId = '7'
+2025-11-29 18:21:46 -    Message = 'Обмен'
+2025-11-29 18:21:46 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lyMYcCF3jAtZXVG2l9CTqoNGTI9PePoYJ4Kqn0z-zb7yEU3KRadvcJJhfImazrFzQOI1_EZBXnCaY-H5igzsUIZOGMn5mEqD9UgIyUwFn2-AttIx-v3dCT2brurOq3ZZvo35nDDfyyLOYzhpAnQaad5IJxbxesPTEhpjyOChsJh5w'
+2025-11-29 18:21:46 - ✅ Данные формы корректны!
+2025-11-29 18:21:46 - 👤 Текущий пользователь: denismitin312@gmail.com (ID: 2151bfdc-855c-493b-b5a7-cbfd0387b6e6)
+2025-11-29 18:21:46 - 📚 OfferedBook: Химия (ID: 7, Exists: True)
+2025-11-29 18:21:46 - 📖 RequestedBook: Алгебра (ID: 6, Exists: True)
+2025-11-29 18:21:46 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 18:21:46 - 🔄 Создаем новый обмен...
+2025-11-29 18:21:46 - 📝 Обмен создан: 7 -> 6
+2025-11-29 18:21:46 - 💾 Сохраняем в базу...
+2025-11-29 18:21:46 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 11
+2025-11-29 18:26:52 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 18:26:52 - 📦 RequestedBookId: 6
+2025-11-29 18:26:52 - 📦 OfferedBookId: 4
+2025-11-29 18:26:52 - 📦 Message: 312
+2025-11-29 18:26:52 - 📨 FORM DATA:
+2025-11-29 18:26:52 -    RequestedBookId = '6'
+2025-11-29 18:26:52 -    OfferedBookId = '4'
+2025-11-29 18:26:52 -    Message = '312'
+2025-11-29 18:26:52 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lx3HrKNpAZmuIz6dqIrKzhRZGd-bIxmA-lLV57jGuDBNKsWfi6iasdBAfNhrnVNAlYLF9TY0Qyr8vizznXaUDgZ80zFwwZzqlLijy-MBB4dTDSG7FdyVkAsg5qPUl7q5IzP_QS0oLFqAZJJxykmQA8hyzCUs2_QDhxNiw7w_SPeGQ'
+2025-11-29 18:26:52 - ✅ Данные формы корректны!
+2025-11-29 18:26:52 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 18:26:52 - 📚 OfferedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 18:26:52 - 📖 RequestedBook: Алгебра (ID: 6, Exists: True)
+2025-11-29 18:26:52 - 🎯 Целевой пользователь: denismitin312@gmail.com (ID: 2151bfdc-855c-493b-b5a7-cbfd0387b6e6)
+2025-11-29 18:26:52 - 🔄 Создаем новый обмен...
+2025-11-29 18:26:52 - 📝 Обмен создан: 4 -> 6
+2025-11-29 18:26:52 - 💾 Сохраняем в базу...
+2025-11-29 18:26:52 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 12
+2025-11-29 18:28:06 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 18:28:06 - 📦 RequestedBookId: 7
+2025-11-29 18:28:06 - 📦 OfferedBookId: 4
+2025-11-29 18:28:06 - 📦 Message: выф
+2025-11-29 18:28:06 - 📨 FORM DATA:
+2025-11-29 18:28:06 -    RequestedBookId = '7'
+2025-11-29 18:28:06 -    OfferedBookId = '4'
+2025-11-29 18:28:06 -    Message = 'выф'
+2025-11-29 18:28:06 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lxdmbSHc6CkayypT9q7Cv1suJHp__0L1GmfHClAoDmjGTrOfVf-NXTvIb8KwSS5eOpoOM48Fr6WrtBLcx7dgYwtUvE-uhkW_7yCrsJSeRAauH6i7c2gKXNXJ5gj4nFJuXV_fGtfBYWZ9vgQTa5xEzIn5tvMaJMq4DRu_eOD6X_Ndg'
+2025-11-29 18:28:06 - ✅ Данные формы корректны!
+2025-11-29 18:28:06 - 👤 Текущий пользователь: denismitin312@gmail.com (ID: 2151bfdc-855c-493b-b5a7-cbfd0387b6e6)
+2025-11-29 18:28:06 - 📚 OfferedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 18:28:06 - 📖 RequestedBook: Химия (ID: 7, Exists: True)
+2025-11-29 18:28:06 - 🎯 Целевой пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 18:28:06 - 🔄 Создаем новый обмен...
+2025-11-29 18:28:06 - 📝 Обмен создан: 4 -> 7
+2025-11-29 18:28:06 - 💾 Сохраняем в базу...
+2025-11-29 18:28:07 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 13
+2025-11-29 18:33:11 - 🎯 === НАЧАЛО СОЗДАНИЯ ОБМЕНА ===
+2025-11-29 18:33:11 - 📦 RequestedBookId: 7
+2025-11-29 18:33:11 - 📦 OfferedBookId: 4
+2025-11-29 18:33:11 - 📦 Message: 312
+2025-11-29 18:33:11 - 📨 FORM DATA:
+2025-11-29 18:33:11 -    RequestedBookId = '7'
+2025-11-29 18:33:11 -    OfferedBookId = '4'
+2025-11-29 18:33:11 -    Message = '312'
+2025-11-29 18:33:11 -    __RequestVerificationToken = 'CfDJ8LyHUrDwRM1MuYm56Tu56lyvUN8r-U3CUu4ycW-0gJrN4_DBQpbEs0hBvJLW2pN1Ju7nPHyI5VPFX6XonkfOPt_7Qm0sjdy2tgBiHHeZ-bX_GZ4TuXkzLVz24rFfIzMH8NZzK30S8CSi16MaPCwjO9FDiGKqdOoNZGLr-Q-IkA-DZwzkjEAVoD56FxjU-z4iYg'
+2025-11-29 18:33:11 - ✅ Данные формы корректны!
+2025-11-29 18:33:11 - 👤 Текущий пользователь: denismitin1705@gmail.com (ID: 679d2e00-89bf-48e6-a1ca-a35d429b11ad)
+2025-11-29 18:33:11 - 📚 OfferedBook: Мертвые души (ID: 4, Exists: True)
+2025-11-29 18:33:11 - 📖 RequestedBook: Химия (ID: 7, Exists: True)
+2025-11-29 18:33:11 - 🎯 Целевой пользователь: denismitin312@gmail.com (ID: 2151bfdc-855c-493b-b5a7-cbfd0387b6e6)
+2025-11-29 18:33:11 - 🔄 Создаем новый обмен...
+2025-11-29 18:33:11 - 📝 Обмен создан: 4 -> 7
+2025-11-29 18:33:11 - 💾 Сохраняем в базу...
+2025-11-29 18:33:11 - 🎉 УСПЕХ! Сохранено записей: 1, ID обмена: 14
