@@ -1,0 +1,62 @@
+﻿@model Exchange
+
+@{
+    ViewData["Title"] = "Детали обмена";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Exchange" asp-action="MyExchanges">Мои обмены</a></li>
+        <li class="breadcrumb-item active">Детали обмена</li>
+    </ol>
+</nav>
+
+<h1>Детали обмена</h1>
+
+<div class="card">
+    <div class="card-header">
+        <strong>Статус: </strong>@Model.Status
+        <span class="float-end">@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</span>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-header">
+                        <h6>Книга для получения</h6>
+                    </div>
+                    <div class="card-body">
+                        <strong>@Model.RequestedBook.Title</strong><br>
+                        <small>Автор: @Model.RequestedBook.Author</small><br>
+                        <small>Владелец: @Model.TargetUser.FullName</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-header">
+                        <h6>Книга для обмена</h6>
+                    </div>
+                    <div class="card-body">
+                        <strong>@Model.OfferedBook.Title</strong><br>
+                        <small>Автор: @Model.OfferedBook.Author</small><br>
+                        <small>Владелец: @Model.Initiator.FullName</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="mt-3">
+                <strong>Сообщение:</strong>
+                <p class="border p-2 rounded">@Model.Message</p>
+            </div>
+        }
+
+        <div class="mt-3">
+            <a asp-action="MyExchanges" class="btn btn-secondary">← Назад к списку</a>
+        </div>
+    </div>
+</div>

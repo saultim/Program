@@ -1,0 +1,227 @@
+﻿@model BookSearchViewModel
+
+@{
+    ViewData["Title"] = "Все учебники";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item active">Все учебники</li>
+    </ol>
+</nav>
+
+<style>
+    .book-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .book-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .book-meta .badge {
+        font-size: 0.7em;
+    }
+</style>
+
+<div class="row">
+    <!-- Боковая панель с фильтрами -->
+    <div class="col-md-3">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">🔍 Поиск и фильтры</h5>
+            </div>
+            <div class="card-body">
+                <form method="get" asp-action="Index" id="searchForm">
+                    <!-- Поиск -->
+                    <div class="mb-3">
+                        <label class="form-label">Поиск:</label>
+                        <input type="text" name="search" class="form-control" value="@Model.Search" 
+                               placeholder="Название, автор, предмет..." />
+                    </div>
+
+                    <!-- Предмет -->
+                    <div class="mb-3">
+                        <label class="form-label">Предмет:</label>
+                        <select name="subject" class="form-select">
+                            <option value="all">Все предметы</option>
+                            @foreach (var subject in Model.Subjects)
+                            {
+                                <option value="@subject" selected="@(Model.SelectedSubject == subject)">@subject</option>
+                            }
+                        </select>
+                    </div>
+
+                    <!-- Курс -->
+                    <div class="mb-3">
+                        <label class="form-label">Курс:</label>
+                        <select name="course" class="form-select">
+                            <option value="all">Все курсы</option>
+                            @foreach (var course in Model.Courses)
+                            {
+                                <option value="@course" selected="@(Model.SelectedCourse == course)">@course</option>
+                            }
+                        </select>
+                    </div>
+
+                    <!-- Состояние -->
+                    <div class="mb-3">
+                        <label class="form-label">Состояние:</label>
+                        <select name="condition" class="form-select">
+                            <option value="all">Любое состояние</option>
+                            @foreach (var condition in Model.Conditions)
+                            {
+                                <option value="@condition" selected="@(Model.SelectedCondition == condition)">@condition</option>
+                            }
+                        </select>
+                    </div>
+
+                    <!-- Кнопки -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">🔍 Применить фильтры</button>
+                        <a asp-action="Index" class="btn btn-outline-secondary">🗑️ Сбросить</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">📊 Статистика</h6>
+            </div>
+            <div class="card-body">
+                <p class="mb-0">Всего учебников: <strong>@Model.TotalCount</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Все учебники для обмена</h1>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Books" asp-action="Create" class="btn btn-success">➕ Добавить учебник</a>
+            }
+        </div>
+
+        <!-- Активные фильтры -->
+        @if (Model.HasActiveFilters)
+        {
+            <div class="alert alert-info d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Активные фильтры:</strong>
+                    @if (!string.IsNullOrEmpty(Model.Search))
+                    {
+                        <span class="badge bg-secondary me-1">Поиск: "@Model.Search"</span>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.SelectedSubject) && Model.SelectedSubject != "all")
+                    {
+                        <span class="badge bg-secondary me-1">Предмет: @Model.SelectedSubject</span>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.SelectedCourse) && Model.SelectedCourse != "all")
+                    {
+                        <span class="badge bg-secondary me-1">Курс: @Model.SelectedCourse</span>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.SelectedCondition) && Model.SelectedCondition != "all")
+                    {
+                        <span class="badge bg-secondary me-1">Состояние: @Model.SelectedCondition</span>
+                    }
+                </div>
+                <a asp-action="Index" class="btn btn-sm btn-outline-danger">❌ Очистить</a>
+            </div>
+        }
+
+        <!-- Результаты -->
+        @if (!Model.Books.Any())
+        {
+            <div class="alert alert-warning text-center">
+                <h4>📚 Учебники не найдены</h4>
+                <p class="mb-0">Попробуйте изменить параметры поиска или <a asp-action="Create">добавьте первый учебник</a></p>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                @foreach (var book in Model.Books)
+                {
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 book-card">
+                            <div class="card-body">
+                                <h5 class="card-title">@book.Title</h5>
+                                <p class="card-text text-muted">@book.Author</p>
+                                
+                                <div class="book-meta mb-2">
+                                    @if (!string.IsNullOrEmpty(book.Subject))
+                                    {
+                                        <span class="badge bg-primary me-1">@book.Subject</span>
+                                    }
+                                    @if (!string.IsNullOrEmpty(book.Course))
+                                    {
+                                        <span class="badge bg-info me-1">@book.Course курс</span>
+                                    }
+                                    @if (!string.IsNullOrEmpty(book.Condition))
+                                    {
+                                        <span class="badge bg-secondary">@book.Condition</span>
+                                    }
+                                </div>
+
+                                <div class="book-price mb-2">
+                                    <span class="badge bg-success">🔄 Для обмена</span>
+                                </div>
+
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        👤 @book.User?.FullName<br>
+                                        📅 @book.CreatedAt.ToString("dd.MM.yyyy")
+                                    </small>
+                                </p>
+                            </div>
+                            
+                            <div class="card-footer bg-transparent">
+                                @if (User.Identity.IsAuthenticated && book.User?.UserName != User.Identity.Name)
+                                {
+                                    <a asp-controller="Exchange" asp-action="Create" asp-route-requestedBookId="@book.Id" 
+                                       class="btn btn-outline-warning btn-sm w-100">🔄 Предложить обмен</a>
+                                }
+                                else if (!User.Identity.IsAuthenticated)
+                                {
+                                    <small class="text-muted"><a asp-controller="Account" asp-action="Login">Войдите</a> для обмена</small>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Пагинация -->
+            <div class="text-center mt-4">
+                <p>Показано <strong>@Model.Books.Count</strong> из <strong>@Model.TotalCount</strong> учебников</p>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    // Авто-отправка формы при изменении select (кроме поиска)
+    document.querySelectorAll('select').forEach(select => {
+        select.addEventListener('change', function() {
+            document.getElementById('searchForm').submit();
+        });
+    });
+
+    // Авто-поиск с задержкой
+    let searchTimeout;
+    const searchInput = document.querySelector('input[name="search"]');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                document.getElementById('searchForm').submit();
+            }, 500);
+        });
+    }
+</script>

@@ -1,0 +1,76 @@
+﻿@model CreateComplaintViewModel
+
+@{
+    ViewData["Title"] = "Пожаловаться на пользователя";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item active">Пожаловаться</li>
+    </ol>
+</nav>
+
+<h1>Пожаловаться на пользователя @Model.TargetUserName</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <input type="hidden" asp-for="TargetUserId" />
+            <input type="hidden" asp-for="TargetUserName" />
+            <input type="hidden" asp-for="ExchangeId" />
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group mb-3">
+                        <label asp-for="Type" class="form-label">Тип жалобы *</label>
+                        <select asp-for="Type" class="form-select">
+                            <option value="">Выберите тип жалобы...</option>
+                            <option value="@ComplaintType.ExchangeNotCompleted">Невыполнение обмена</option>
+                            <option value="@ComplaintType.InappropriateBehavior">Некорректное поведение</option>
+                            <option value="@ComplaintType.ItemNotAsDescribed">Несоответствие описанию</option>
+                            <option value="@ComplaintType.Other">Другое</option>
+                        </select>
+                        <span asp-validation-for="Type" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Description" class="form-label">Описание проблемы *</label>
+                        <textarea asp-for="Description" class="form-control" rows="6"
+                                  placeholder="Подробно опишите проблему..."></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                        <small class="text-muted">Осталось символов: <span id="charCount">1000</span></small>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Внимание!</strong> Жалобы проверяются администраторами.
+                        Пожалуйста, предоставляйте точную и правдивую информацию.
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning">🚨 Отправить жалобу</button>
+                        <a href="javascript:history.back()" class="btn btn-secondary">← Назад</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Счетчик символов
+        document.getElementById('Description').addEventListener('input', function() {
+            const maxLength = 1000;
+            const currentLength = this.value.length;
+            const remaining = maxLength - currentLength;
+            document.getElementById('charCount').textContent = remaining;
+
+            if (remaining < 0) {
+                document.getElementById('charCount').classList.add('text-danger');
+            } else {
+                document.getElementById('charCount').classList.remove('text-danger');
+            }
+        });
+    </script>
+}

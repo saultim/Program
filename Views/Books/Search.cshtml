@@ -1,0 +1,76 @@
+﻿@model BookSearchViewModel
+
+@{
+    ViewData["Title"] = "Расширенный поиск учебников";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Books" asp-action="Index">Все учебники</a></li>
+        <li class="breadcrumb-item active">Расширенный поиск</li>
+    </ol>
+</nav>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="mb-0">🔍 Расширенный поиск учебников</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="Search">
+                    <div class="row">
+                        <!-- Поиск -->
+                        <div class="col-12 mb-3">
+                            <label asp-for="Search" class="form-label"></label>
+                            <input asp-for="Search" class="form-control" placeholder="Введите название, автора или предмет..." />
+                            <span asp-validation-for="Search" class="text-danger"></span>
+                        </div>
+
+                        <!-- Фильтры в одну строку -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="SelectedSubject" class="form-label"></label>
+                            <select asp-for="SelectedSubject" class="form-select">
+                                <option value="all">Все предметы</option>
+                                @foreach (var subject in Model.Subjects)
+                                {
+                                    <option value="@subject">@subject</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="SelectedCourse" class="form-label"></label>
+                            <select asp-for="SelectedCourse" class="form-select">
+                                <option value="all">Все курсы</option>
+                                @foreach (var course in Model.Courses)
+                                {
+                                    <option value="@course">@course</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="SelectedCondition" class="form-label"></label>
+                            <select asp-for="SelectedCondition" class="form-select">
+                                <option value="all">Любое состояние</option>
+                                @foreach (var condition in Model.Conditions)
+                                {
+                                    <option value="@condition">@condition</option>
+                                }
+                            </select>
+                        </div>
+
+                        <!-- УБРАН БЛОК С ТИПОМ -->
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">🔍 Найти учебники</button>
+                        <a asp-action="Index" class="btn btn-secondary btn-lg">📚 Все учебники</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model CreateExchangeViewModel
+
+<h1>Предложить обмен (Упрощенная форма)</h1>
+
+<form method="post">
+    <input type="hidden" name="RequestedBookId" value="@Model.RequestedBookId" />
+
+    <div class="mb-3">
+        <label>Выберите вашу книгу для обмена:</label>
+        <select name="OfferedBookId" class="form-select" required>
+            <option value="">-- Выберите книгу --</option>
+            @foreach (var book in Model.MyBooks)
+            {
+                <option value="@book.Id">@book.Title - @book.Author</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Сообщение (необязательно):</label>
+        <textarea name="Message" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Отправить предложение</button>
+</form>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        console.log('Форма отправляется...');
+        const select = document.querySelector('select[name="OfferedBookId"]');
+        if (!select.value) {
+            e.preventDefault();
+            alert('Выберите книгу!');
+            return false;
+        }
+        return true;
+    });
+</script>

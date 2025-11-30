@@ -1,0 +1,99 @@
+﻿@model List<Review>
+
+@{
+    ViewData["Title"] = "Мои отзывы";
+    var ratingStats = ViewBag.RatingStats as dynamic;
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item active">Мои отзывы</li>
+    </ol>
+</nav>
+
+<h1>Мои отзывы</h1>
+
+<!-- Статистика рейтинга -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="display-4 text-warning">@ratingStats.Average</h2>
+                <p class="mb-1">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <span class="@(i <= ratingStats.Average ? "text-warning" : "text-muted")">⭐</span>
+                    }
+                </p>
+                <p class="text-muted">На основе @ratingStats.Count отзывов</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h6>Распределение оценок:</h6>
+                @for (int i = 5; i >= 1; i--)
+                {
+                    var count = i == 5 ? ratingStats.FiveStars :
+                    i == 4 ? ratingStats.FourStars :
+                    i == 3 ? ratingStats.ThreeStars :
+                    i == 2 ? ratingStats.TwoStars : ratingStats.OneStar;
+                    var percentage = ratingStats.Count > 0 ? (count * 100 / ratingStats.Count) : 0;
+
+                    <div class="d-flex align-items-center mb-1">
+                        <small class="me-2">@i ⭐</small>
+                        <div class="progress flex-grow-1" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: @percentage%"></div>
+                        </div>
+                        <small class="ms-2">@count</small>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        У вас пока нет отзывов от других пользователей.
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var review in Model)
+        {
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h6 class="card-title mb-0">@review.Author.FullName</h6>
+                            <small class="text-muted">@review.CreatedAt.ToString("dd.MM.yyyy")</small>
+                        </div>
+
+                        <div class="mb-2">
+                            @for (int i = 0; i < review.Rating; i++)
+                            {
+                                <span class="text-warning">⭐</span>
+                            }
+                            @for (int i = review.Rating; i < 5; i++)
+                            {
+                                <span class="text-muted">⭐</span>
+                            }
+                        </div>
+
+                        <p class="card-text">@review.Comment</p>
+
+                        @if (review.ExchangeId.HasValue)
+                        {
+                            <small class="text-muted">Обмен #@review.ExchangeId</small>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

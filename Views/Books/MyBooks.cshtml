@@ -1,0 +1,75 @@
+﻿@model List<Book>
+
+@{
+    ViewData["Title"] = "Мои учебники";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item active">Мои учебники</li>
+    </ol>
+</nav>
+
+<h1>Мои учебники</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        У вас пока нет учебников.
+        <a asp-action="Create" class="alert-link">Добавьте первый учебник</a>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.Title</h5>
+                        <p class="card-text text-muted">@book.Author</p>
+
+                        <div class="mb-2">
+                            @if (!string.IsNullOrEmpty(book.Subject))
+                            {
+                                <span class="badge bg-primary me-1">@book.Subject</span>
+                            }
+                            @if (!string.IsNullOrEmpty(book.Course))
+                            {
+                                <span class="badge bg-info me-1">@book.Course курс</span>
+                            }
+                            @if (!string.IsNullOrEmpty(book.Condition))
+                            {
+                                <span class="badge bg-secondary">@book.Condition</span>
+                            }
+                        </div>
+
+                        <div class="mb-2">
+                            <span class="badge bg-success">🔄 Для обмена</span>
+                        </div>
+
+                        <p class="card-text">
+                            <small class="text-muted">
+                                📅 Добавлен: @book.CreatedAt.ToString("dd.MM.yyyy")
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<div class="mt-3">
+    <a asp-action="Create" class="btn btn-success">➕ Добавить учебник</a>
+    <a asp-action="Index" class="btn btn-primary">📖 Все учебники</a>
+</div>

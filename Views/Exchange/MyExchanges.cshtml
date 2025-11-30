@@ -1,0 +1,162 @@
+﻿@model List<Exchange>
+
+@{
+    ViewData["Title"] = "Мои обмены";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="breadcrumb-item active">Мои обмены</li>
+    </ol>
+</nav>
+
+<h1>Мои обмены</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        У вас пока нет предложений обмена.
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var exchange in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card @GetCardColor(exchange.Status)">
+                    <div class="card-header">
+                        <strong>Статус: </strong>@GetStatusText(exchange.Status)
+                        <span class="float-end">@exchange.CreatedAt.ToString("dd.MM.yyyy HH:mm")</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Предложение обмена</h6>
+
+                        @if (User.Identity.Name == exchange.Initiator.UserName)
+                        {
+                            <!-- ОТОБРАЖЕНИЕ ДЛЯ ИНИЦИАТОРА ОБМЕНА -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card bg-success text-white">
+                                        <div class="card-body">
+                                            <h6>Вы получаете:</h6>
+                                            <strong>@exchange.RequestedBook.Title</strong><br>
+                                            <small>от @exchange.TargetUser.FullName</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h6>Вы отдаете:</h6>
+                                            <strong>@exchange.OfferedBook.Title</strong><br>
+                                            <small>@exchange.TargetUser.FullName</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- ОТОБРАЖЕНИЕ ДЛЯ ПОЛУЧАТЕЛЯ ОБМЕНА -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card bg-success text-white">
+                                        <div class="card-body">
+                                            <h6>Вы получаете:</h6>
+                                            <strong>@exchange.OfferedBook.Title</strong><br>
+                                            <small>от @exchange.Initiator.FullName</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h6>Вы отдаете:</h6>
+                                            <strong>@exchange.RequestedBook.Title</strong><br>
+                                            <small>@exchange.Initiator.FullName</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        @if (exchange.Status == ExchangeStatus.Accepted)
+                        {
+                            <div class="mt-2">
+                                <a asp-controller="Exchange" asp-action="Completed" class="btn btn-outline-info btn-sm">✅ Перейти к завершенным</a>
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(exchange.Message))
+                        {
+                            <div class="mt-2">
+                                <strong>Сообщение:</strong> @exchange.Message
+                            </div>
+                        }
+
+                        @if (exchange.Status == ExchangeStatus.Pending)
+                        {
+                            <div class="mt-3">
+                                @if (User.Identity.Name == exchange.TargetUser.UserName)
+                                {
+                                    <form method="post" asp-action="Accept" asp-route-id="@exchange.Id" class="d-inline">
+                                        <button type="submit" class="btn btn-success btn-sm">✅ Принять</button>
+                                    </form>
+                                    <form method="post" asp-action="Reject" asp-route-id="@exchange.Id" class="d-inline">
+                                        <button type="submit" class="btn btn-danger btn-sm">❌ Отклонить</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning">Ожидает ответа от @exchange.TargetUser.FullName</span>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@functions {
+    string GetCardColor(ExchangeStatus status)
+    {
+        return status switch
+        {
+            ExchangeStatus.Pending => "border-warning",
+            ExchangeStatus.Accepted => "border-success",
+            ExchangeStatus.Rejected => "border-danger",
+            ExchangeStatus.Completed => "border-info",
+            _ => ""
+        };
+    }
+
+    string GetStatusText(ExchangeStatus status)
+    {
+        return status switch
+        {
+            ExchangeStatus.Pending => "⏳ Ожидает ответа",
+            ExchangeStatus.Accepted => "✅ Принят",
+            ExchangeStatus.Rejected => "❌ Отклонен",
+            ExchangeStatus.Completed => "✅ Завершен",
+            _ => status.ToString()
+        };
+    }
+}
